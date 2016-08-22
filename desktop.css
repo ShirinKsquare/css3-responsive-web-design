@@ -1,0 +1,236 @@
+
+*{
+  box-sizing: border-box;
+}
+@import 'https://fonts.googleapis.com/css?family=Bangers';
+body{
+  background-color: #FFF0CE;
+  display:flex;
+  flex-flow: column;
+  margin:5em;
+  border-top:0.5em solid grey;
+  margin-top:0;
+  background-color: white;
+}
+.masthead{
+  flex:1 1 auto;
+  border-top: 1em;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 2.5em;
+  border-bottom: 5px double grey;
+  padding:1em;
+
+}
+.masthead img{
+  border-left: 10px solid red;
+  top:1em;
+  flex: 0 0 auto;
+  margin-top: 6px;
+}
+.masthead nav{
+  padding:2em;
+  position: relative;
+  flex: 0 0 95%;
+}
+nav ul{
+  flex-flow: row nowrap;
+  display:flex;
+  align-items:center;
+  height: 50%;
+  /*border-bottom: 2px double black;*/
+}
+nav ul li{
+  border-left: 1px dashed black;
+  font-weight: bold;
+	font-size: 1em;
+	padding: 1em;
+	list-style-type: none;
+  /* flex-grow, flex-shrink, flex-basis */
+  flex: 1 0 auto;
+}
+nav ul li:first-of-type{
+  border-left: none;
+}
+nav ul li:hover{
+	color: skyblue;
+  animation: bounceIn 1s;
+  transform: scale(1.2)
+}
+  @keyframes bounceIn{
+    0% {
+      opacity: 1;
+      transform: scale(.3);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    70% {
+      opacity: 1;
+      transform: scale(.9);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  /* -----------------------------------------------------------------------------*/
+.wrapper{
+  display:flex;
+  flex-direction: row;
+  margin-bottom: 2.5em;
+  border-bottom: 5px double grey;
+  padding:1em;
+}
+.wrapper .left{
+  flex: 1 1;
+}
+.wrapper .right{
+  flex: 1 1;
+}
+.carousel{
+  background-color: black;
+  overflow: hidden;
+  flex: 1 0 100%;
+}
+.frame{
+  display: flex;
+  flex-flow: row nowrap;
+  width:500%;
+  position:relative;
+  animation: slide 10s infinite;
+}
+.carousel img{
+    flex: 1 1 auto;
+    width: 20%;
+    padding: 50px;
+}
+@keyframes slide {
+  0%{left:0%;}
+  25%{left:0%;}
+  40%{left: -100%;}
+  50%{left:-100%;}
+  60%{left:-200%;}
+  65%{left:-200%;}
+  75%{left:-300%;}
+  80%{left:-300%;}
+  90%{left:-400%;}
+  95%{left:-400%;}
+  100%{left:0%;}
+}
+/*--------------------------------------------------------------------------------*/
+.promo-nav{
+  display:flex;
+  flex-flow: column nowrap;
+  background-color: #136487;
+}
+.promo-nav h3{
+  position: relative;
+  font-family: 'Bangers', cursive;
+  font-size: 2em;
+  flex: 0 0 auto;
+  font-weight: bolder;
+  text-align:center;
+  background-color: #136487;
+  margin-top: 0.8em;
+}
+.promo-nav ul{
+  display:flex;
+  flex: 1 0 auto;
+  flex-direction: row;
+}
+.promo-nav ul li{
+  flex: 1 0 auto;
+  font-size: 1em;
+	padding: 2.5em;
+	list-style-type: none;
+  border: 1px solid black;
+  margin:2.5em;
+}
+.promo-nav ul li img{
+  margin:0 auto;
+  display:block;
+}
+.promo-nav ul p{
+  margin-top: 1em;
+  text-align: center;
+  font-size: 2em;
+}
+.promo-nav ul a{
+  align-items: center;
+  list-style-type: none;
+}
+.promo-nav ul li img{
+  width: 100px;
+  height: 100px;
+}
+/*--------------------------------------------------------------------------------*/
+.content {
+  display:flex;
+  flex-flow:row;
+  align-items: stretch;
+  border-top: 5px double grey;
+  border-bottom: 5px double grey;
+  margin-top:2.5em;
+  margin-bottom: 2.5em;
+  padding:1em;
+}
+.content .testimonals{
+  /* since p is a block element so if we don't shrink it will take all the line */
+flex: 1 2.5 auto;
+}
+.content .difference{
+  border-left: 1px dashed blue;
+  flex: 1 3 auto;
+  display:flex;
+  flex-flow: column;
+}
+.content h3{
+  /*margin-top: 20px;*/
+  font-size: 2em;
+  font-weight: bolder;
+  padding:5px;
+  font-family: 'Bangers', cursive;
+  text-align: center;
+  flex:0 0 auto;
+}
+.content .difference h3{
+  font-size:1em;
+  margin-bottom:1em;
+}
+.content .difference p{
+  padding:1em;
+  font-size: 1.2em;
+  border-top: 1px dashed black;
+}
+.content .testimonals p{
+ border-top: 1px dashed black;
+ padding:1em;
+ flex: 1 0 auto;
+ font-size: 1.2em
+}
+/*--------------------------------------------------------------------------------*/
+.footermain{
+ display:flex;
+ flex-flow: row;
+ /*background:yellow;*/
+ padding:1em;
+
+}
+.footermain .link-contact{
+  flex:0 0 20%;
+}
+.footermain .link-info{
+  flex: 1 2 40%;
+}
+.footermain .empty{
+  flex: 0 0 30%;
+}
+.footermain p{
+  text-align: justify;
+}

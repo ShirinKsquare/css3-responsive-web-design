@@ -1,0 +1,38 @@
+/* lets work on the logo */
+.masthead{
+  flex-direction: column;
+}
+.masthead img{
+  display:block;
+  margin: 0 auto;
+}
+nav ul{
+  flex-flow: row wrap;
+  justify-content: center;
+}
+/*nav ul li{
+  border-left: none;
+}*/
+.masthead nav ul li{
+  flex: 0 0 20%;
+}
+.promo-nav ul{
+  display:flex;
+  flex-wrap: wrap;
+}
+.promo-nav ul li{
+  border:none;
+}
+
+.content{
+  flex-flow: column;
+}
+.content .difference h3{
+  font-size: 2em;
+}
+.footermain .link-contact{
+  margin-right: 2em;
+}
+.content .difference{
+  border-left:none;
+}
